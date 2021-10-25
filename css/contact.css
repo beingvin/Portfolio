@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  background: white;
+}
+
+.header {
+  color: white;
+  text-align: left;
+  position:absolute;
+  top: 25px;
+  right: 50px;
+}
+
+ul {
+  display: flex;
+  list-style-type:none;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-family:sans-serif;
+
+}
+ul li {
+  margin-right:50px;
+}
+
+ul li a {
+  text-decoration:none;
+  color: #272324;
+
+  cursor: pointer;
+}
+
+ul li a:hover {
+  color: #FD2155;
+}
+
+
+.hello-text {
+  color: #272324;
+  display: block;
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+}
+
+.hello-text h1 {
+  font-size: 110px;
+  font-family: sans-serif;
+
+}
+
+.hello-text h1 span {
+  color: #13CDCF;
+  text-shadow: 8px 0px #FD2155;
+}
+
+.hello-text h1:hover {
+  color: #13CDCF;
+  font-size: 120px;
+}
+
+
+.hello-text p {
+
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #272324;
+}
+
+.hello-text .contact-num {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+
+.phone-img img{
+  display: inline-block;
+  position: absolute;
+  width: 1000px;
+  top: 35px;
+  right: 5%;
+}
