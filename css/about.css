@@ -5,7 +5,8 @@
 }
 
 body {
-
+  background: #1D1D1D;
+  cursor: none;
 }
 
 ul {
@@ -23,12 +24,12 @@ ul li {
 
 ul li a {
   text-decoration:none;
-  color: #272324;
+  color: white;
   cursor: pointer;
 }
 
 ul li a:hover {
-  color: #FD2155;
+  color: #05FDD8;
 }
 
 .header {
@@ -58,53 +59,32 @@ ul li a:hover {
   background-color: black;
 }
 
-.hello-text {
-  color: #272324;
-  display: block;
-  position: absolute;
-  bottom: 90px;
-  left: 50px;
+.image {
+  display:flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 8%;
 }
 
-.hello-text h1 {
-  font-size: 100px;
+.image img {
+  width: 10%;
+}
+.content {
+  color: white;
+  height: auto;
+  width: 50em;
+  display: flex;
+  margin: auto;
+  margin-top:40px;
   font-family: sans-serif;
-  font-weight: 900;
-  margin-top: -25px;
+  font-size: 1em;
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 1.5;
 }
 
-.hello-text h1 span {
-  color: #13CDCF;
-  text-shadow: 8px 0px #FD2155;
-}
+.content a {
+  text-decoration: none;
+  color:  #05FDD8 ;
 
-.hello-text h1:hover {
-  color: #13CDCF;
-  font-size: 120px;
-}
-
-
-.hello-text p {
-  font-size: 30px;
-  font-family: sans-serif;
-  color: #272324;
-}
-
-.hello-text .contact-num {
-  margin-top: 10px;
-  font-size: 40px;
-  color: #13CDCF;
-}
-
-.phone-img img{
-  display: inline-block;
-  position: absolute;
-  width: 1000px;
-  top: 100px;
-  right: 3.5%;
-}
-
-.social-links ul li {
-  margin-right: 1px;
-  padding: 0.5rem;
 }

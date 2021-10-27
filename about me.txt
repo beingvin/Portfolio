@@ -1,0 +1,18 @@
+I create successful responsive websites that are fast, easy to use, and built with best practices. 
+The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, 
+custom plugins, features, animations, and coding interactive layouts.
+
+I also have full-stack developer experience with popular open-source 
+CMS like (WordPress, Drupal, Magento, Keystone.js and others) .
+
+    <p>
+      Hi There, My name is VIN and i am a web developer and I create successful responsive websites that are fast, easy to use, and built with best practices.
+      Professionally connected with the IT industry for many years, Well-organised person, problem solver and independent coder.
+      <br>
+      <br>
+      I have good skills in HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, Node JS, REACT JS, Flask (Python) I built responsive website so that your website will look perfect on all the small and wide screens.
+      <br>
+      <br>
+      i will use advance CSS3 and vanilla javascript for animations
+      on your website. .I can convert figma to html and i can convert psd to html. I know how to use javascript with html in order to increase the website beauty.I will be your good front end web developer.
+    </p>
