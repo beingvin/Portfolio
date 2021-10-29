@@ -2,6 +2,7 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
@@ -12,13 +13,13 @@ ul {
   display: flex;
   list-style-type:none;
   letter-spacing: 3px;
-  font-size: 15px;
-  font-family:sans-serif;
+  font-size: 0.9rem;
 }
 
 ul li {
   margin-right:50px;
   padding: 1rem;
+
 }
 
 ul li a {
@@ -35,8 +36,16 @@ ul li a:hover {
   color: white;
   text-align: left;
   position:absolute;
-  top: 25px;
   right: 50px;
+}
+
+.link-bubble {
+  transform: scale(2);
+  background-color: black;
+}
+
+.container {
+  padding: 2% 5%;
 }
 
 .cursor {
@@ -53,24 +62,18 @@ ul li a:hover {
   z-index: -1;
 }
 
-.link-bubble {
-  transform: scale(2);
-  background-color: black;
-}
 
 .hello-text {
   color: #272324;
   display: block;
   position: absolute;
-  bottom: 90px;
-  left: 50px;
+  bottom: 9rem;
 }
 
 .hello-text h1 {
-  font-size: 100px;
-  font-family: sans-serif;
+  font-size: 6.25rem;
   font-weight: 900;
-  margin-top: -25px;
+  margin-top: -1.6rem;
 }
 
 .hello-text h1 span {
@@ -80,13 +83,12 @@ ul li a:hover {
 
 .hello-text h1:hover {
   color: #13CDCF;
-  font-size: 120px;
+  font-size: 7.5rem;
 }
 
 
 .hello-text p {
-  font-size: 30px;
-  font-family: sans-serif;
+  font-size: 2.1rem;
   color: #272324;
 }
 
@@ -99,7 +101,7 @@ ul li a:hover {
 .phone-img img{
   display: inline-block;
   position: absolute;
-  width: 1000px;
+  width: 75%;
   top: 100px;
   right: 3.5%;
 }
@@ -108,3 +110,69 @@ ul li a:hover {
   margin-right: 1px;
   padding: 0.5rem;
 }
+
+@media (max-width: 500px) {
+  /* .container {
+  display: flex;
+  flex-direction: column;
+  } */
+
+  .header {
+    padding: 10px;
+    position: static;
+    display: block;
+  }
+  ul {
+    display:block;
+  }
+
+  ul li {
+    margin-right:0px;
+    text-align: center;
+  }
+
+  .hello-text {
+    display: block;
+    position: relative;
+    bottom: 0px;
+    text-align: center;
+    /* left: 50px; */
+  }
+  .hello-text h1 {
+      font-size: 3.25rem;
+      margin-top: 0rem;
+    }
+
+  .hello-text h1:hover {
+      color: #13CDCF;
+      font-size: 3.5rem;
+    }
+  .hello-text p {
+      font-size: 1.1rem;
+    }
+
+  .hello-text .contact-num {
+      font-size: 1.5rem;
+    }
+
+  .phone-img {
+    text-align: center
+  }
+
+  .phone-img img{
+
+    position: relative;
+    width: 15rem;
+    top: 0px;
+    right: 0%;
+
+    padding: 20px;
+  }
+
+  .social-links ul {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+  }
+
+ }
