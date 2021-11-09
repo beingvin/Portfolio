@@ -7,18 +7,24 @@
 
 body {
   background: #1D1D1D;
+  
   cursor: none;
 }
 
+.navBar {
+  padding-top: 1%;
+}
 
 ul {
   display: flex;
-  list-style-type:none;
+  justify-content: flex-end;
+  list-style-type: none;
   letter-spacing: 3px;
   font-size: 0.9rem;
 }
+
 ul li {
-  margin-right:50px;
+  margin-right: 50px;
   padding: 1rem;
 }
 
@@ -30,18 +36,6 @@ ul li a {
 
 ul li a:hover {
   color:  #05FDD8;
-}
-
-.header {
-  color: white;
-  text-align: left;
-  position:absolute;
-  right: 50px;
-}
-
-.link-bubble {
-  transform: scale(2);
-  background-color: black;
 }
 
 .container {
@@ -62,11 +56,17 @@ ul li a:hover {
   z-index: -1;
 }
 
+.link-bubble {
+  transform: scale(2);
+  background-color: black;
+}
+
+
 .intro-text {
   color: white;
   display: block;
   position: absolute;
-  bottom: 5rem;
+  bottom: 20%;
 }
 
 .intro-text h1 {
@@ -112,11 +112,13 @@ ul li a:hover {
 }
 
 @media (max-width: 500px) {
-  .header {
+
+  .navBar {
     padding: 10px;
     position: static;
     display: block;
   }
+
   ul {
     display:block;
   }
@@ -132,12 +134,18 @@ ul li a:hover {
     text-align: center;
     bottom: 0px;
     word-wrap: break-word;
-    /* left: 50px; */
+    left: 50px;
   }
 
   .intro-text h1 {
     font-size: 3.25rem;
   }
+
+  .intro-text h1:hover {
+    color: #FD2155;
+    font-size: 3.5rem;
+  }
+
   .intro-text p {
     font-size: 0.8rem;
     letter-spacing: 3px;
@@ -148,4 +156,16 @@ ul li a:hover {
     width: 7.5rem;
     margin-bottom: 1.5rem;
   }
+  .intro-text button a:hover{
+    font-size: 0.9rem;
+  }
+}
+
+#preloader {
+  height: 100vh;
+  width: 100%;
+  background: white url(../images/loading.gif) center no-repeat;
+  background-size: 35%;
+  position: fixed;
+  z-index: 100;
 }
