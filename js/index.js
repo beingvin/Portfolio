@@ -1,7 +1,14 @@
+
 console.log("javascript linked")
 
+let loader = document.getElementById('preloader');
+window.addEventListener('load', () => {
+  loader.style.display = "none";
+});
+
+
 let mouseCurser = document.querySelector('.cursor');
-let navLinks = document.querySelectorAll('.header ul li')
+let navLinks = document.querySelectorAll('.navBar ul li')
 
 window.addEventListener('mousemove', (e) => {
   mouseCurser.style.top = e.pageY + 'px';
@@ -17,3 +24,4 @@ navLinks.forEach((link) => {
     mouseCurser.classList.add('link-bubble')
   });
 });
+

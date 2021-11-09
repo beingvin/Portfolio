@@ -1,47 +1,42 @@
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
-    font-family:sans-serif;
+  font-family: sans-serif;
 }
 
 body {
-  background: #1D1D1D;
+
+  background: rgb(249,249,249);
+  background: linear-gradient(90deg, rgba(249,249,249,1) 0%, rgba(29,29,29,1) 100%);
   cursor: none;
+}
+
+.navBar {
+  padding-top: 1%;
 }
 
 ul {
   display: flex;
-  list-style-type:none;
+  justify-content: flex-end;
+  list-style-type: none;
   letter-spacing: 3px;
   font-size: 0.9rem;
 }
 
 ul li {
-  margin-right:50px;
+  margin-right: 50px;
   padding: 1rem;
 }
 
 ul li a {
-  text-decoration:none;
-  color: white;
+  text-decoration: none;
+  color: #05FDD8;
   cursor: pointer;
 }
 
 ul li a:hover {
-  color: #05FDD8;
-}
-
-.header {
   color: white;
-  text-align: left;
-  position:absolute;
-  right: 50px;
-}
-
-.link-bubble {
-  transform: scale(2);
-  background-color: black;
 }
 
 .container {
@@ -62,25 +57,27 @@ ul li a:hover {
   z-index: -1;
 }
 
-.image {
-  display:flex;
-  position: relative;
+.link-bubble {
+  transform: scale(2);
   justify-content: center;
-  margin-top: 8%;
+  background-color: black;
 }
 
-.image img {
-  width: 10rem;
+.vinImg {
+  text-align: center;
+  margin: 12% auto;
 }
 
-.content {
+.vinImg img {
+  width: 20%;
+  float: left;
+  margin-right: 3rem;
+}
+
+.content{
   color: white;
-  height: auto;
-  width: 50rem;
-  margin: auto;
-  margin-top:40px;
   font-size: 1rem;
-  text-align: left;
+  text-align:left;
   letter-spacing: 2px;
   line-height: 1.5;
   position: relative;
@@ -88,32 +85,39 @@ ul li a:hover {
 
 .content a {
   text-decoration: none;
-  color:  #05FDD8 ;
-
+  color: #FD2155;
 }
 
 @media (max-width: 500px) {
-
-  .header {
+  .navBar {
     padding: 10px;
     position: static;
-    display: block;
+    /* display: block; */
   }
+
   ul {
-    display:block;
+    display: block;
   }
 
   ul li {
-    margin-right:0px;
+    margin-right: 0px;
     text-align: center;
   }
 
-  .content p {
-
-    display: inline-block;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+  .vinImg img {
+    width: 50%;
+    margin-bottom: 30px;
+    float: none;
+    margin-right: 0rem;
   }
 
+}
 
+#preloader {
+  height: 100vh;
+  width: 100%;
+  background: white url(../images/loading.gif) center no-repeat;
+  background-size: 35%;
+  position: fixed;
+  z-index: 100;
 }
