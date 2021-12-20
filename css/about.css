@@ -12,6 +12,8 @@ body {
   cursor: none;
 }
 
+/* -------------------- header/navabar ---------------- */
+
 .navBar {
   padding-top: 1%;
 }
@@ -22,6 +24,7 @@ ul {
   list-style-type: none;
   letter-spacing: 3px;
   font-size: 0.9rem;
+  
 }
 
 ul li {
