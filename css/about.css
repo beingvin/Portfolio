@@ -18,13 +18,52 @@ body {
   padding-top: 1%;
 }
 
+#toggle {
+  display: none;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  margin: 1% auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background-color: #05fdd8;
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+
+#toggle::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background-color: #05fdd8;
+  transform: translateY(4px);
+  transition: 0.3s;
+}
+
+#toggle.active::before {
+  transform: translateY(0px) rotate(-45deg);
+  background-color: #fd2155;
+}
+
+#toggle.active::after {
+  transform: translateY(0px) rotate(45deg);
+  background-color: #fd2155;
+}
+
 ul {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
   letter-spacing: 3px;
   font-size: 0.9rem;
-  
 }
 
 ul li {
@@ -68,7 +107,7 @@ ul li a:hover {
 
 .vinImg {
   text-align: center;
-  margin: 12% auto;
+  margin: 10% auto;
 }
 
 .vinImg img {
@@ -91,15 +130,213 @@ ul li a:hover {
   color: #FD2155;
 }
 
+/* -------------------- skills ---------------- */
+
+.skill-box {
+  margin: 12% auto 5%;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.skill-box h1 {
+  font-size: 6.25rem;
+  font-weight: 900;
+  color: #272324;
+  transition: 0.2s;
+}
+
+.skill-box h1 span {
+  color:  #13CDCF ;
+  text-shadow: 8px 0px #FD2155 ;
+}
+
+.skill-box h1:hover {
+  font-size: 7.5rem;
+}
+
+
+.skills {
+  margin-right: 20%;
+}
+
+
+.skills h2 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 1rem;
+  /* text-shadow: -1px 1px 2px rgb(2, 238, 226); */
+}
+
+.progress-bar {
+  background-color: #959595;
+  width: 500px;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.progress-bar div {
+  width: 0%;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.progress-bar div span {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #222;
+  font-size: x-small;
+  color: #fff;
+  float: right;
+  margin-top: -10px;
+  margin-left: -20px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  /* padding: 2%; */
+}
+
+.html {
+  background-color: #e91e63;
+  animation: html 1s linear forwards;
+}
+
+
+
+.css {
+  background-color: #39dc9e;
+  animation: css 1s linear forwards;
+}
+
+.php {
+  
+  background-color: #9c27b0;
+  animation: php 1s linear forwards;
+}
+
+.javascript {
+  
+  background-color: #ffeb3b;
+  animation: javascript 1s linear forwards;
+}
+
+.python {
+  background-color: #3672A4;
+  animation: python 1s linear forwards;
+}
+
+.react {
+  background-color: #00bcd4;
+  animation: react 1s linear forwards;
+}
+
+
+.html span {
+  border: 1px solid #e91e63;
+}
+
+
+.css span {
+  border: 1px solid #39dc9e;
+}
+
+.php span {
+  border: 1px solid #9c27b0;
+}
+
+.javascript span {
+  border: 1px solid #ffeb3b;
+}
+
+.python span {
+  border: 1px solid #3672A4;
+}
+
+.react span {
+  border: 1px solid #00bcd4;
+}
+
+/* animation  */
+
+@keyframes html {
+  100% {
+      width: 90%;
+  }
+}
+
+@keyframes css {
+  100% {
+      width: 86%;
+  }
+}
+
+@keyframes php {
+  100% {
+      width: 85%;
+  }
+}
+
+@keyframes javascript {
+  100% {
+      width: 80%;
+  }
+}
+
+@keyframes python {
+  100% {
+      width: 75%;
+  }
+}
+
+@keyframes react {
+  100% {
+      width: 50%;
+  }
+}
+
+/* make responsive */
+
+@media screen and (max-width: 990px) {
+
+  .vinImg img {
+    width: 35%;
+  
+  }
+  .skill-box {
+  margin: 2% auto 5%;
+  }
+  .skills {
+    margin-right: 1%;
+  }
+  .progress-bar {
+    width: 250px;
+  }
+}
+
 @media (max-width: 500px) {
-  .navBar {
+  /* .navBar {
     padding: 10px;
     position: static;
-    /* display: block; */
+    display: block;
+  } */
+
+  #toggle {
+    display: flex;
   }
 
   ul {
-    display: block;
+    display: none;
+    transition: 0.5s;
+  }
+
+  ul.active {
+    display: flex;
+    flex-direction: column;
   }
 
   ul li {
@@ -113,6 +350,27 @@ ul li a:hover {
     float: none;
     margin-right: 0rem;
   }
+
+  .skill-box {
+    flex-direction: column;
+    justify-content:center;
+  }
+  
+  .skill-box h1 {
+   font-size: 3.5rem;
+  }
+
+  .skill-box h1:hover {
+    font-size: 4rem;
+  }
+
+.skills {
+  margin-right: 0%;
+}
+
+.progress-bar {
+  width: 250px;
+}
 
 }
 

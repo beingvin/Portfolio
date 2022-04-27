@@ -1,18 +1,59 @@
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
 body {
   cursor: none;
+  overflow: hidden;
 }
 
 /* -------------------- header/navabar ---------------- */
 
 .navBar {
   padding-top: 1%;
+}
+
+#toggle {
+  display: none;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  margin: 1% auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background-color: #05fdd8;
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+
+#toggle::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background-color: #05fdd8;
+  transform: translateY(4px);
+  transition: 0.3s;
+}
+
+#toggle.active::before {
+  transform: translateY(0px) rotate(-45deg);
+  background-color: #fd2155;
+}
+
+#toggle.active::after {
+  transform: translateY(0px) rotate(45deg);
+  background-color: #fd2155;
 }
 
 ul {
@@ -29,18 +70,21 @@ ul li {
 }
 
 ul li a {
-  text-decoration:none;
+  text-decoration: none;
   color: #272324;
   cursor: pointer;
 }
 
 ul li a:hover {
-  color: #FD2155;
+  color: #fd2155;
 }
 
-
 .container {
+  margin-top: 2%;
   padding: 2% 5%;
+  height: 85vh;
+ 
+
 }
 
 .cursor {
@@ -65,80 +109,105 @@ ul li a:hover {
 .text {
   color: #272324;
   display: block;
-  position: absolute;
-  /* bottom: 9rem; */
-  bottom: 20%;
+
 }
 
 .text h1 {
   font-size: 6.25rem;
   font-weight: 900;
   margin-top: -1.6rem;
+  transition: 0.2s;
 }
 
 .text h1 span {
-  color: #13CDCF;
-  text-shadow: 8px 0px #FD2155;
+  color: #13cdcf;
+  text-shadow: 8px 0px #fd2155;
 }
 
 .text h1:hover {
-  color: #13CDCF;
+  color: #13cdcf;
   font-size: 7.5rem;
 }
 
-
-.text p {
+.contactLink {
+  display: inline-block;
+}
+.contactLink p {
   font-size: 2.1rem;
   color: #272324;
+  margin: 6% 0;
 }
 
-.text .contactNumber {
+.contactLink .contactNumber {
   margin-top: 10px;
   font-size: 40px;
-  color: #13CDCF;
+  color: #13cdcf;
 }
 
-.phoneImg img{
-  display: inline-block;
-  position: absolute;
-  width: 65%;
-  bottom: 20% ;
-  right: 3.5%;
-}
-
-.socialLinks {
-  /* display:flex; */
-}
-.socialLinks ul li {
-  /* margin-right: 1px; */
-  /* padding: 0.5rem;  */
+.contactLink .contactNumber:hover {
+  color: #fd2155;
 }
 
 .socialLinks ul a {
-  text-decoration:none;
+  text-decoration: none;
   color: #272324;
-  
-  
+  transition: 0.2s;
+}
+
+.phoneImg img {
+  display: inline-block;
+  position: absolute;
+  width: 65%;
+  bottom: 10%;
+  right: 3.5%;
+}
+
+
+
+/* make responsive */
+
+  @media screen and (max-width: 990px) {
+
+  .text h1 {
+    font-size: 7.5rem;
+    margin-top: 0rem;
+  }
+
+  .text h1:hover {
+    color: #13cdcf;
+    font-size: 9rem;
+  }
+  .text p {
+    font-size: 1.1rem;
+    margin: 6% 0;
+  }
+
+  .text .contactNumber {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 500px) {
-  /* .container {
-  display: flex;
-  flex-direction: column;
-  } */
 
-  .header {
-    padding: 10px;
-    position: static;
-    display: block;
+  .container {
+    text-align: center;
+  }
+  #toggle {
+    display: flex;
   }
 
   ul {
-    display:block;
+    display: none;
+    transition: 0.5s;
+  }
+
+  ul.active {
+    display: flex;
+    flex-direction: column;
   }
 
   ul li {
-    margin-right:0px;
+    margin-right: 0px;
     text-align: center;
   }
 
@@ -147,42 +216,45 @@ ul li a:hover {
     position: relative;
     bottom: 0px;
     text-align: center;
-    /* left: 50px; */
+  
   }
   .text h1 {
-      font-size: 3.25rem;
-      margin-top: 0rem;
-    }
-
-  .text h1:hover {
-      color: #13CDCF;
-      font-size: 3.5rem;
-    }
-  .text p {
-      font-size: 1.1rem;
-    }
-
-  .text .contactNumber {
-      font-size: 1.5rem;
-    }
-
-  .phoneImg {
-    text-align: center
+    font-size: 4rem;
+    margin-top: 0rem;
   }
 
-  .phoneImg img{
+  .text h1:hover {
+    color: #13cdcf;
+    font-size: 4.5rem;
+  }
 
-    position: relative;
-    width: 15rem;
-    top: 0px;
-    right: 0%;
-    padding: 20px;
+ 
+  .contactLink p {
+    font-size: 1.3rem;
+    margin: 6% 0;
+  }
+
+  .contactLink .contactNumber {
+    font-size: 2rem;
   }
 
   .socialLinks ul {
     margin-top: 2%;
     display: flex;
     justify-content: center;
+  }
+
+  .phoneImg {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .phoneImg img {
+    position: relative;
+    width: 25rem;
+    top: 0px;
+    right: 50px;
+    padding: 20px;
   }
 }
 
